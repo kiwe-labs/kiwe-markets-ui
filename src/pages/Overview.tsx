@@ -3,6 +3,7 @@ import cgTokens from "../config/cg_ids.json";
 import CoinLogos from "../config/logos.json";
 import { makeStyles } from "@material-ui/core";
 import { Carousel } from 'antd';
+import { getTradePageUrl } from '../utils/markets';
 import "../Overview.less";
 
 const useStyles = makeStyles((theme) => ({
@@ -78,14 +79,18 @@ export default function HomePage() {
 
   const kiweSPLAddress = "8WftAet8HSHskSp8RUVwdPt6xr3CtF76UF5FPmazY7bt";
 
+  const tradePageUrl = '/#' + getTradePageUrl();
+
   return (
     <>
       <div className="container-home">
         <div className="section teaser dex">
           <div className="inner">
             
-            <p> For projects and traders who likes simple and user-friendly interface.</p>
-            
+            <p> For projects and traders who likes simple, user-friendly interface.</p>
+            <a href={tradePageUrl} target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }}>
+              Start trading
+            </a>
             <h5>
               POWERED BY
             </h5>
@@ -128,15 +133,15 @@ export default function HomePage() {
         <div className="section teaser community">
           <div className="inner">
             
-            <p>
-              We are a community driven organisation and all the code source used remain free and open source.
-            </p>
+            <h4>
+              We are a community driven organisation. All the code used remain free and open source for everyone.
+            </h4>
 
             <a href="https://discord.gg/HBefBzQcdy" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }}>
-              Join Discord &gt;
+              Join Discord
             </a>
-            <a href="https://twitter.com/KiweMarkets" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }}>
-              Follow us on Twitter &gt;
+            <a href="https://twitter.com/KiweMarkets" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }} className="twitter">
+              Follow us on Twitter
             </a>
           </div>
         </div>
