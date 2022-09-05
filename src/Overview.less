@@ -223,12 +223,12 @@ a:hover {
     &.dex {
 
       .inner {
-        background: url(/images/mobile_desktop_silver.png) bottom right/55% no-repeat;
+        background: url(/images/mobile_desktop_silver.png) bottom right/45% no-repeat;
         flex-direction: column;
         margin-top: 0px;
-        padding: 334px 0 140px 112px;
+        padding: 274px 0 0px 112px;
 
-        @media(max-width:1600px) {
+        @media(max-width:1200px) {
           flex-direction: column;
           margin: 98px auto 0;
           background-size: 55%;
@@ -239,14 +239,49 @@ a:hover {
         @media(max-width:500px) {
           background-size: 100%;
           background-position: bottom center;
-          margin: 48px auto 0;
-          padding: 0 16px 85px;
+          margin: 18px auto 0;
+          padding: 0 16px 285px;
         }
 
-        p {
+      a {
+          background: linear-gradient(100.61deg, #8fc740 0%, #8fc740 100%);
+          border-radius: 16px;
+          //margin: 65px auto 0;
+          color: #0f1625;
+          font-weight: bold;
+          font-size: 18px;
+          width: 200px;
+          line-height: 12px;
+          display: inline-block;
+          padding: 20px 8px;
+          text-align: center;
+
           @media(max-width:500px) {
-            margin-top: 25px;
+            margin: 65px auto 0;
+            width: 200px;
+            margin-top: 30px;
+            text-align:center;
           }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        h5 {
+              @media(max-width:500px) {
+                margin: 65px auto 0;
+              }
+        }
+        p {
+            font-weight: 700;
+            font-size: 28px;
+            @media(max-width:500px) {
+              margin: 65px auto 0;
+              font-size: 28px;
+              text-align:center;
+              font-weight: 700;
+            }
         }
 
         img {
@@ -254,18 +289,20 @@ a:hover {
           width: 100px;
           
           @media(max-width:500px) {
-            margin-bottom: 236px;
+            margin: 5px auto 15px;
+            //margin-bottom: 236px;
           }
         }
       }
     }
 
     &.docs .inner {
-      background: url(/images/docs.png) bottom right/40% no-repeat;
+      max-width: 1600px;
+      background: url(/images/docs.png) bottom right/30% no-repeat;
       flex-direction: column;
       margin-top: 4px;
       margin-bottom: 120px;
-      padding: 200px 0px 150px 112px;
+      padding: 170px 0px 0px 112px;
 
       a {
         cursor: pointer;
@@ -285,7 +322,7 @@ a:hover {
       }
 
       @media(max-width:500px) {
-        background-size: 70%;
+        background-size: 80%;
         background-position: bottom center;
         margin-top: 85px;
         margin-bottom: 100px;
@@ -299,11 +336,47 @@ a:hover {
     }
 
     &.community .inner {
-      background: url(/images/community.png) bottom right/30% no-repeat;
+      //background: url(/images/community.png) bottom right/30% no-repeat;
+      margin-top: 90px;
       flex-direction: column;
-      margin-top: 64px;
-      padding: 250px 0 60px 112px;
+      //padding: 140px 90px 90px 270px;
 
+      a {
+          background: linear-gradient(100.61deg, #8fc740 0%, #8fc740 100%);
+          border-radius: 16px;
+          margin: 65px auto 0;
+          color: #0f1625;
+          font-weight: bold;
+          font-size: 18px;
+          width: 250px;
+          line-height: 12px;
+          display: inline-block;
+          padding: 20px 8px;
+          text-align: center;
+
+          @media(max-width:1200px) {
+            margin: 65px auto 8px;
+            width: 200px;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &.twitter {
+            margin-top: 16px;
+            //background: rgba(255, 129, 10, 0.1);
+            //border: 4px solid #FF810A;
+            //padding: 18px 48px;
+
+            // cursor: default;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      /*
       a {
         cursor: pointer;
 
@@ -311,27 +384,45 @@ a:hover {
           opacity: 1;
         }
       }
+      
 
       @media(max-width:1200px) {
         background-size: 30%;
         background-position: bottom center;
         margin-top: 85px;
-        padding: 0 16px 335px;
+        padding: 0 16px 90px;
         
       }
-
-      @media(max-width:500px) {
+      */
+      @media(max-width:1200px) {
         background-size: 50%;
         background-position: bottom center;
-        margin-top: 85px;
-        margin-bottom: 100px;
-        padding: 0 16px 235px;
+        margin-top: 5px;
+        margin-bottom: 70px;
+        padding: 0 16px 35px;
         
       }
 
-      h4, p {
+      p {
         max-width: 624px;
+        text-align: center;
       }
+      h4 {
+        color: #fff;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 39px;
+        max-width: 1200px;
+        text-align: center;
+        margin: 95px auto 0;
+
+        @media(max-width:1200px) {
+          font-size: 24px;
+          line-height: 41px;
+          text-align: left;
+        }
+      }
+
     }
 
     &.kiwe {
