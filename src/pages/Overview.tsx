@@ -83,8 +83,9 @@ export default function HomePage() {
       <div className="container-home">
         <div className="section teaser dex">
           <div className="inner">
-            <h3>Kiwe &#129373;</h3>
-            <p> You'll find only simple and user-friendly interface here. Hope you'll like it :)</p>
+            
+            <p> For projects and traders who likes simple and user-friendly interface.</p>
+            
             <h5>
               POWERED BY
             </h5>
@@ -126,10 +127,11 @@ export default function HomePage() {
 
         <div className="section teaser community">
           <div className="inner">
-            <h4>Being together</h4>
+            
             <p>
-              We are the most important part of Kiwe. That's why Kiwe is a community driven organisation and all the code source used remain free and open source.
+              We are a community driven organisation and all the code source used remain free and open source.
             </p>
+
             <a href="https://discord.gg/HBefBzQcdy" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }}>
               Join Discord &gt;
             </a>
@@ -178,10 +180,11 @@ export default function HomePage() {
 
         <div className="section teaser docs">
           <div className="inner">
-            <h4>Reading break &#128578;</h4>
+    
             <p>
               Explore the documentations and learn about KIWE token, governance system, interacting with Kiwe Markets and more.
             </p>
+
             <a href="https://docs.kiwe.markets/" target="_blank" rel="noopener noreferrer">
               Explore the docs &gt;
             </a>
