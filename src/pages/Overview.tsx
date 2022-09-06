@@ -134,7 +134,7 @@ export default function HomePage() {
           <div className="inner">
             
             <h4>
-              We are a community driven organisation. All the code used remain free and open source for everyone.
+              All the code used remain free and open source for everyone. We are a community driven organisation.
             </h4>
 
             <a href="https://discord.gg/HBefBzQcdy" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }}>
