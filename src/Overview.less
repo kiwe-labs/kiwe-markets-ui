@@ -223,17 +223,43 @@ a:hover {
     &.dex {
 
       .inner {
-        background: url(/images/mobile_desktop_silver.png) bottom right/45% no-repeat;
+        background: url(/images/mobile_desktop_silver.png) bottom right/contain no-repeat;
+        max-width: 1600px;
         flex-direction: column;
-        margin-top: 0px;
-        padding: 274px 0 0px 112px;
+        align-items: flex-start;
+        margin-top: 50px;
+        //padding: 218px 0 0px 112px;
+         padding: 90px 104px;
+
+        @media(max-width:1400px) {
+          flex-direction: column;
+          margin: 18px auto 0;
+          background-size: 55%;
+          background-position: bottom center;
+          padding: 0 16px 435px;
+        }
 
         @media(max-width:1200px) {
           flex-direction: column;
-          margin: 98px auto 0;
+          margin: 18px auto 0;
+          background-size: 55%;
+          background-position: bottom center;
+          padding: 0 16px 435px;
+        }
+
+        @media(max-width:991px) {
+          flex-direction: column;
+          margin: 18px auto 0;
           background-size: 55%;
           background-position: bottom center;
           padding: 0 16px 335px;
+        }
+
+        @media(max-width:750px) {
+          background-size: 55%;
+          background-position: bottom center;
+          margin: 18px auto 0;
+          padding: 0 16px 285px;
         }
 
         @media(max-width:500px) {
@@ -244,7 +270,7 @@ a:hover {
         }
 
       a {
-          background: linear-gradient(100.61deg, #8fc740 0%, #8fc740 100%);
+          background: linear-gradient(100.61deg, #bdda40 0%, #8fc740 100%);
           border-radius: 16px;
           //margin: 65px auto 0;
           color: #0f1625;
@@ -256,7 +282,7 @@ a:hover {
           padding: 20px 8px;
           text-align: center;
 
-          @media(max-width:500px) {
+          @media(max-width:1400px) {
             margin: 65px auto 0;
             width: 200px;
             margin-top: 30px;
@@ -269,14 +295,15 @@ a:hover {
         }
 
         h5 {
-              @media(max-width:500px) {
+              @media(max-width:1400px) {
                 margin: 65px auto 0;
               }
         }
         p {
             font-weight: 700;
             font-size: 28px;
-            @media(max-width:500px) {
+
+            @media(max-width:1400px) {
               margin: 65px auto 0;
               font-size: 28px;
               text-align:center;
@@ -288,7 +315,7 @@ a:hover {
           margin-bottom: 6px;
           width: 100px;
           
-          @media(max-width:500px) {
+          @media(max-width:1400px) {
             margin: 5px auto 15px;
             //margin-bottom: 236px;
           }
@@ -297,12 +324,13 @@ a:hover {
     }
 
     &.docs .inner {
-      max-width: 1600px;
-      background: url(/images/docs.png) bottom right/30% no-repeat;
+      max-width: 1400px;
+      background: url(/images/docs.png) bottom left/contain no-repeat;
       flex-direction: column;
+      align-items: flex-end;
       margin-top: 4px;
       margin-bottom: 120px;
-      padding: 170px 0px 0px 112px;
+      padding: 118px 104px;
 
       a {
         cursor: pointer;
@@ -312,9 +340,30 @@ a:hover {
         }
       }
 
-      @media(max-width:1200px) {
+      @media(max-width:1300px) {
         background-size: 40%;
         background-position: bottom center;
+        align-items: flex-start;
+        margin-top: 85px;
+        margin-bottom: 100px;
+        padding: 0 16px 285px;
+        
+      }
+
+      @media(max-width:991px) {
+        background-size: 40%;
+        background-position: bottom center;
+        align-items: flex-start;
+        margin-top: 85px;
+        margin-bottom: 100px;
+        padding: 0 16px 285px;
+        
+      }
+
+      @media(max-width:750px) {
+        background-size: 60%;
+        background-position: bottom center;
+        align-items: flex-start;
         margin-top: 85px;
         margin-bottom: 100px;
         padding: 0 16px 285px;
@@ -342,7 +391,7 @@ a:hover {
       //padding: 140px 90px 90px 270px;
 
       a {
-          background: linear-gradient(100.61deg, #8fc740 0%, #8fc740 100%);
+          background: linear-gradient(100.61deg, #bdda40 0%, #8fc740 100%);
           border-radius: 16px;
           margin: 65px auto 0;
           color: #0f1625;
