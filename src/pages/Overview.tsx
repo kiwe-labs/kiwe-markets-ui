@@ -134,7 +134,7 @@ export default function HomePage() {
           <div className="inner">
             
             <h4>
-              All the code used remain free and open source for everyone. We are a community driven organisation.
+              Kiwe is a community driven project. All the code used remain free and open source for everyone.
             </h4>
 
             <a href="https://discord.gg/HBefBzQcdy" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', cursor: 'pointer' }}>
