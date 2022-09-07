@@ -218,13 +218,13 @@ export default function TopBar() {
             style={{ paddingLeft: 5, paddingRight: 5 }}
             gutter={16}
           >
-            <Col>
+          {/*  <Col>
               <PlusCircleOutlined
                 style={{ color: '#fff', fontSize: '20px' }}
                 onClick={() => setAddEndpointVisible(true)}
               />
             </Col>
-           {/*} <Col>
+            <Col>
               <Popover
                 content={endpoint}
                 placement="bottomRight"
