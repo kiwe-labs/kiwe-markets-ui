@@ -386,14 +386,18 @@ a:hover {
 
     &.community .inner {
       //background: url(/images/community.png) bottom right/30% no-repeat;
-      margin-top: 90px;
+      //margin-top: 90px;
+      margin: 125px auto 0;
+      display: block;
       flex-direction: column;
       //padding: 140px 90px 90px 270px;
 
       a {
-          background: linear-gradient(100.61deg, #bdda40 0%, #8fc740 100%);
+          background: linear-gradient(100.61deg, #bdda40 0%, #bdda40 100%);
           border-radius: 16px;
-          margin: 65px auto 0;
+          //margin: 65px auto 0;
+          margin-left: 35%;
+          margin-top: 50px;
           color: #0f1625;
           font-weight: bold;
           font-size: 18px;
@@ -413,7 +417,8 @@ a:hover {
           }
 
           &.twitter {
-            margin-top: 16px;
+            margin-left: 16px;
+            background: linear-gradient(100.61deg, #bdda40 0%, #bdda40 100%);
             //background: rgba(255, 129, 10, 0.1);
             //border: 4px solid #FF810A;
             //padding: 18px 48px;
@@ -422,6 +427,12 @@ a:hover {
 
             &:hover {
               opacity: 1;
+            }
+
+            @media(max-width:450px) {
+              margin: 5px auto 8px;
+              width: 200px;
+              align-item: flex-start;
             }
           }
         }
@@ -458,7 +469,7 @@ a:hover {
       }
       h4 {
         color: #fff;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 28px;
         line-height: 39px;
         max-width: 1200px;
