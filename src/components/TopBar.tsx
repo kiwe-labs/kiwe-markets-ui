@@ -146,7 +146,7 @@ export default function TopBar() {
       <Wrapper> 
         <LogoWrapper onClick={() => window.location.href = homePageUrl}>
           <img src={logo} alt="" />
-       
+          {''}
         </LogoWrapper>
         <Menu
           mode="horizontal"
@@ -220,11 +220,11 @@ export default function TopBar() {
           >
             <Col>
               <PlusCircleOutlined
-                style={{ color: '#2abdd2' }}
+                style={{ color: '#fff', fontSize: '20px' }}
                 onClick={() => setAddEndpointVisible(true)}
               />
             </Col>
-            <Col>
+           {/*} <Col>
               <Popover
                 content={endpoint}
                 placement="bottomRight"
@@ -232,8 +232,8 @@ export default function TopBar() {
                 trigger="hover"
               >
                 <InfoCircleOutlined style={{ color: '#90ED0C' }} />
-              </Popover>
-            </Col>
+              </Popover> 
+            </Col> */}
             <Col>
               <Select
                 onSelect={setEndpoint}
