@@ -87,7 +87,7 @@ const TradeButton = styled(Button)({
 
 const ConnectButton = styled(Button)({
   margin: '20px 0px 0px 0px',
-  background: '#8fc740',
+  background: 'linear-gradient(100.61deg, #C5EC53 0%, #92C119 100%)',
   border: '1px solid #8fc740 !important',
   color: '#0f1625',
   width: '100%',
@@ -95,11 +95,11 @@ const ConnectButton = styled(Button)({
   fontWeight: 600,
   fontSize: 16,
   '&:hover': {
-    background: '#8fc740',
+    background: 'linear-gradient(100.61deg, #C5EC53 0%, #92C119 100%)',
     color:'#0f1625',
   },
   '&:focus': {
-    background: '#8fc740',
+    background: 'linear-gradient(100.61deg, #C5EC53 0%, #92C119 100%)',
     color: '#0f1625',
   },
 });
