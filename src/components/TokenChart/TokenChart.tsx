@@ -49,7 +49,7 @@ export default function TokenChart({ token }: { token: any }) {
            
         </div>
       </Grid>
-      <Grid sm={12} md={2}>
+      <Grid item sm={12} md={2}>
         <a className={`${styles.range} ${sparkRange === 12 ? styles.active : ''}`} onClick={() => setSparkRange(12)}>12h</a>
         <a className={`${styles.range} ${sparkRange === 24 ? styles.active : ''}`} onClick={() => setSparkRange(24)}>1d</a>
         <a className={`${styles.range} ${sparkRange === 168 ? styles.active : ''}`} onClick={() => setSparkRange(168)}>7d</a>
