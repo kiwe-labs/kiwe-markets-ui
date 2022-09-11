@@ -335,7 +335,8 @@ export function _useUnfilteredTrades(limit = 10000) {
   const [trades] = useAsyncData(
     getUnfilteredTrades,
     tuple('getUnfilteredTrades', market, connection),
-    { refreshInterval: _SLOW_REFRESH_INTERVAL },
+    //{ refreshInterval: _SLOW_REFRESH_INTERVAL },
+    { refreshInterval: _VERY_SLOW_REFRESH_INTERVAL },
   );
   return trades;
   // NOTE: For now, websocket is too expensive since the event queue is large
@@ -365,7 +366,8 @@ export function useBonfidaTrades() {
   return useAsyncData(
     getBonfidaTrades,
     tuple('getBonfidaTrades', marketAddress),
-    { refreshInterval: _SLOW_REFRESH_INTERVAL },
+    //{ refreshInterval: _SLOW_REFRESH_INTERVAL },
+    { refreshInterval: _VERY_SLOW_REFRESH_INTERVAL },
     false,
   );
 }
@@ -419,7 +421,8 @@ export function useOpenOrdersAccounts(fast = false) {
   return useAsyncData<OpenOrders[] | null>(
     getOpenOrdersAccounts,
     tuple('getOpenOrdersAccounts', wallet, market, connected),
-    { refreshInterval: fast ? _FAST_REFRESH_INTERVAL : _SLOW_REFRESH_INTERVAL },
+    //{ refreshInterval: fast ? _FAST_REFRESH_INTERVAL : _SLOW_REFRESH_INTERVAL },
+     { refreshInterval: _VERY_SLOW_REFRESH_INTERVAL },
   );
 }
 
@@ -446,7 +449,8 @@ export function useTokenAccounts(): [
   return useAsyncData(
     getTokenAccounts,
     tuple('getTokenAccounts', wallet, connected),
-    { refreshInterval: _SLOW_REFRESH_INTERVAL },
+    //{ refreshInterval: _SLOW_REFRESH_INTERVAL },
+    { refreshInterval: _VERY_SLOW_REFRESH_INTERVAL },
   );
 }
 
@@ -603,7 +607,8 @@ export function useFeeDiscountKeys(): [
   return useAsyncData(
     getFeeDiscountKeys,
     tuple('getFeeDiscountKeys', wallet, market, connected),
-    { refreshInterval: _SLOW_REFRESH_INTERVAL },
+    //{ refreshInterval: _SLOW_REFRESH_INTERVAL },
+    { refreshInterval: _VERY_SLOW_REFRESH_INTERVAL },
   );
 }
 
@@ -656,7 +661,8 @@ export function useAllOpenOrdersAccounts() {
       marketInfos.length,
       (programIds || []).length,
     ),
-    { refreshInterval: _SLOW_REFRESH_INTERVAL },
+    //{ refreshInterval: _SLOW_REFRESH_INTERVAL },
+    { refreshInterval: _VERY_SLOW_REFRESH_INTERVAL },
   );
 }
 
