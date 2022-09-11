@@ -77,7 +77,7 @@ export default function HomePage() {
     });
   }, []);
 
-  const kiweSPLAddress = "8WftAet8HSHskSp8RUVwdPt6xr3CtF76UF5FPmazY7bt";
+  //const kiweSPLAddress = "8WftAet8HSHskSp8RUVwdPt6xr3CtF76UF5FPmazY7bt";
 
   const tradePageUrl = '/#' + getTradePageUrl();
 
@@ -150,9 +150,7 @@ export default function HomePage() {
           <div className="kiwe-header">
             <div className="inner">
               <h2 style={{ color:'#fff'}}>KIWE Token</h2>
-              <p className="address">
-                {kiweSPLAddress}
-              </p>
+              
               <div className="links">
                 <a href="https://docs.kiwe.markets/kiwe-token/token-details" target="_blank" rel="noopener noreferrer">
                   Token Details &gt;  
