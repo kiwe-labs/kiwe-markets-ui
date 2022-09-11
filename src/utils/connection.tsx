@@ -7,7 +7,12 @@ import { ConnectionContextValues, EndpointInfo } from './types';
 
 export const ENDPOINTS: EndpointInfo[] = [
   {
-    name: 'Genesys',
+    name: 'RPC endpoint',
+    endpoint: 'https://nameless-quick-yard.solana-mainnet.discover.quiknode.pro/',
+    custom: false,
+  },
+  {
+    name: 'GenesysGo',
     endpoint: 'https://ssc-dao.genesysgo.net/',
     custom: false,
   },
@@ -16,6 +21,7 @@ export const ENDPOINTS: EndpointInfo[] = [
     endpoint: 'https://solana-api.projectserum.com',
     custom: false,
   },
+
   //{ name: 'localnet', endpoint: 'http://127.0.0.1:8899', custom: false },
 ];
 
@@ -81,8 +87,8 @@ export function ConnectionProvider({ children }) {
       value={{
         endpoint,
         setEndpoint,
-        connection,
-        sendConnection,
+        connection : connection,
+        sendConnection: connection,
         availableEndpoints,
         setCustomEndpoints,
       }}
