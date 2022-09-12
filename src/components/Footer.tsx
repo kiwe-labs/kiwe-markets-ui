@@ -17,7 +17,7 @@ const LogoWrapper = styled.div`
 `;
 
 const { Footer } = Layout;
-const homePageUrl = "https://zalina.finance";
+const homePageUrl = "https://kiwe.markets";
 
 export const CustomFooter = () => {
 
@@ -56,6 +56,11 @@ export const CustomFooter = () => {
           <a href="https://discord.gg/HBefBzQcdy" target="_blank" rel="noopener noreferrer">Discord</a>
           <a href="https://t.me/KiweMarkets" target="_blank" rel="noopener noreferrer">Telegram</a>
         </Col>
+      </Row>
+      <Row justify="center">
+         <Col flex="300px 0 0" style={{ marginRight: 80, marginTop: 80, textAlign:'center', color:'#879AAB', fontSize: 14 }}>
+            <p>All rights reserved © kiwe.markets 2022</p>
+          </Col>
       </Row>
     </Footer>
   );
