@@ -346,7 +346,7 @@ a:hover {
         align-items: flex-start;
         margin-top: 85px;
         margin-bottom: 100px;
-        padding: 0 16px 285px;
+        padding: 0 16px 420px;
         
       }
 
@@ -381,6 +381,11 @@ a:hover {
 
       h3, p {
         max-width: 624px;
+
+        @media(max-width:1300px) {
+          max-width: 991px;
+          
+        }
       }
     }
 
@@ -490,8 +495,6 @@ a:hover {
       margin-top: 144px;
       background: linear-gradient(100.61deg, #0f1625 0%, #0f1625 100%);
 
-      
-
       @media(max-width:991px) {
         margin-top: 80px;
       }
@@ -503,7 +506,8 @@ a:hover {
         border: 8px solid #262C39;
         transform: skewY(-3deg);
         text-align: center;
-        padding: 40px;
+        height: 300px;
+        padding: 80px;
 
         @media(max-width:991px) {
           padding: 37px 16px;
@@ -515,12 +519,13 @@ a:hover {
           margin: 0 auto;
           display: inline-block;
           text-align: left;
-          padding-left: 240px;
+          padding-left: 200px;
           transform: skewY(3deg);
           background: url(/images/tokens/KIWE.png) center left/contain no-repeat;
 
 
           @media(max-width:991px) {
+            margin-top: 50px;
             padding-left: 95px;
             padding-bottom: 60px;
             background-position: top left;
@@ -540,7 +545,7 @@ a:hover {
             @media(max-width:991px) {
               position: absolute;
               left: 8px;
-              top: 150px;
+              top: 110px;
 
             }
 
