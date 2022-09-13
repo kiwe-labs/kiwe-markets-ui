@@ -58,7 +58,7 @@ export const CustomFooter = () => {
         </Col>
       </Row>
       <Row justify="center">
-         <Col flex="300px 0 0" style={{ marginRight: 80, marginTop: 80, textAlign:'center', color:'#879AAB', fontSize: 14 }}>
+         <Col flex="300px 0 0" className="copyright">
             <p>All rights reserved © kiwe.markets 2022</p>
           </Col>
       </Row>
