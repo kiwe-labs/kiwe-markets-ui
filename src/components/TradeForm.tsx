@@ -21,6 +21,7 @@ import { getUnixTs, placeOrder } from '../utils/send';
 import { refreshCache } from '../utils/fetch-loop';
 import CoinLogos from '../config/logos.json';
 import tuple from 'immutable-tuple';
+import { useIpAddress } from '../utils/useIpAddress';
 
 const Wrapper = styled.div({
   padding: '10px 16px 16px',
@@ -161,6 +162,7 @@ export default function TradeForm({
     storedFeeDiscountKey: feeDiscountKey,
   } = useLocallyStoredFeeDiscountKey();
 
+  const { ipAllowed } = useIpAddress();
   const [postOnly, setPostOnly] = useState(false);
   const [ioc, setIoc] = useState(false);
   const [baseSize, setBaseSize] = useState<number | undefined>(undefined);
@@ -419,17 +421,28 @@ export default function TradeForm({
         {!connected ? (
           <ConnectButton type="primary" size="large" onClick={connect}>Connect wallet</ConnectButton>
         ) : (
-          <TradeButton
-            disabled={!price || !baseSize}
-            onClick={onSubmit}
-            block
-            type="primary"
-            size="large"
-            loading={submitting}
-            buy-side={side === 'buy'}
-          >
-            {side === 'buy' ? 'Buy' : 'Sell'}
-          </TradeButton>
+          ipAllowed ? (
+            <TradeButton
+              disabled={!price || !baseSize}
+              onClick={onSubmit}
+              block
+              type="primary"
+              size="large"
+              loading={submitting}
+              buy-side={side === 'buy'}
+            >
+              {side === 'buy' ? 'Buy' : 'Sell'}
+            </TradeButton>
+          ) : ( 
+
+            <TradeButton
+              block
+              size="large"
+              loading={submitting}
+              disabled
+            >
+              Country Not Allowed
+            </TradeButton>)
         )}
       </Wrapper>
     </FloatingElement>
