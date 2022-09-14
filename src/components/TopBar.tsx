@@ -12,7 +12,7 @@ import styled from 'styled-components';
 import { useWallet } from '../utils/wallet';
 import { ENDPOINTS, useConnectionConfig } from '../utils/connection';
 import Settings from './Settings';
-import CustomClusterEndpointDialog from './CustomClusterEndpointDialog';
+//import CustomClusterEndpointDialog from './CustomClusterEndpointDialog';
 import { EndpointInfo } from '../utils/types';
 import { notify } from '../utils/notifications';
 import { Connection } from '@solana/web3.js';
@@ -137,12 +137,7 @@ export default function TopBar() {
 
   return (
     <>
-      <CustomClusterEndpointDialog
-        visible={addEndpointVisible}
-        testingConnection={testingConnection}
-        onAddCustomEndpoint={onAddCustomEndpoint}
-        onClose={() => setAddEndpointVisible(false)}
-      />
+      
       <Wrapper> 
         <LogoWrapper onClick={() => window.location.href = homePageUrl}>
           <img src={logo} alt="" />

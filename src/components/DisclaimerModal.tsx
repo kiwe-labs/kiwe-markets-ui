@@ -56,11 +56,14 @@ const DisclaimerModal = ({
                         For more information please read the <a href="https://kiwe.markets/rules.pdf" target="_blank" rel="noopener noreferrer">Rules</a> and the <a href="https://kiwe.markets/risk-statement.pdf" target="_blank" rel="noopener noreferrer">Risk Statement</a>
                     </p>
                     <p>
+                        This is unaudited software, use it at your own risk.
+                    </p>
+                    <p>
                         Cookies are used to enhance the services available to you. You agree to the use of cookies.
                     </p>
                 </div>
                 <div style={{ marginTop: "22px" }}>
-                    <Checkbox
+                    <Checkbox 
                         checked={acceptRisks}
                         onChange={(e) => setAcceptRisks(e.target.checked)}
                     >
