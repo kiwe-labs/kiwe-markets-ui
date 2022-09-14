@@ -189,7 +189,7 @@ export function WalletProvider({ children }) {
         onCancel={close}
         width={400}
       >
-        {WALLET_PROVIDERS.map((provider) => {
+        {WALLET_PROVIDERS.map((provider, idx) => {
           const onClick = function () {
             setProviderUrl(provider.url);
             setAutoConnect(true);
@@ -198,6 +198,7 @@ export function WalletProvider({ children }) {
 
           return (
             <Button
+              key={idx}
               size="large"
               type={providerUrl === provider.url ? 'primary' : 'ghost'}
               onClick={onClick}

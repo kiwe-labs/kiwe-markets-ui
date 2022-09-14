@@ -925,26 +925,6 @@ const AccountInfoResult = struct({
   rentEpoch: 'number?',
 });
 
-//Add function for multiple accounts in batch
-export async function getMultipleAccountsInBatches(
-  connection: Connection,
-  publicKeys: PublicKey[],
-//) {
-): Promise<[string, AccountInfo<Buffer> | null][]> {
-  let marketAddressChucks = new Array<PublicKey[]>();
-  while (publicKeys.length > 0) {
-    marketAddressChucks.push(publicKeys.splice(0,100));
-  }
-  let marketAccountInfoResponses = new Array<[string, (AccountInfo<Buffer> | null)]>();
-  for (let i = 0; i < marketAddressChucks.length; i++) {
-    let marketAccountInfoResponse = await getMultipleSolanaAccounts(connection, marketAddressChucks[i]);
-    Object.entries(marketAccountInfoResponse.value).forEach((value) => {
-      marketAccountInfoResponses.push(value);
-    })
-  }
-  return marketAccountInfoResponses;
-}
-
 export const GetMultipleAccountsAndContextRpcResult = jsonRpcResultAndContext(
   struct.array([struct.union(['null', AccountInfoResult])]),
 );

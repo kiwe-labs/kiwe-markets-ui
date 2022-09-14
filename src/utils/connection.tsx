@@ -12,7 +12,7 @@ export const ENDPOINTS: EndpointInfo[] = [
     custom: false,
   },
   {
-    name: 'RPC endpoint',
+    name: 'QuickNode',
     endpoint: 'https://nameless-quick-yard.solana-mainnet.discover.quiknode.pro/',
     custom: false,
   },
