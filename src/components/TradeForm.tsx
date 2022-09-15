@@ -206,22 +206,22 @@ export default function TradeForm({
           console.log(`Skipping refreshing accounts`);
           return;
         }
-        const startTime = getUnixTs();
-        console.log(`Refreshing accounts for ${market.address}`);
+        //const startTime = getUnixTs();
+        //console.log(`Refreshing accounts for ${market.address}`);
         await market?.findOpenOrdersAccountsForOwner(sendConnection, publicKey);
         await market?.findBestFeeDiscountKey(sendConnection, publicKey);
-        const endTime = getUnixTs();
-        console.log(
-          `Finished refreshing accounts for ${market.address} after ${endTime - startTime
-          }`,
-        );
+        //const endTime = getUnixTs();
+        //console.log(`Finished refreshing accounts for ${market.address}`);
       } catch (e) {
         console.log(`Encountered error when refreshing trading accounts: ${e}`);
       }
     };
-    warmUpCache();
-    const id = setInterval(warmUpCache, 30_000);
-    return () => clearInterval(id);
+    if (connected && wallet && publicKey && market) {
+      warmUpCache();
+      const id = setInterval(warmUpCache, 30_000);
+      return () => clearInterval(id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [market, sendConnection, wallet, publicKey]);
 
   const onSetBaseSize = (baseSize: number | undefined) => {
