@@ -18,7 +18,7 @@ export default function TokenStats({ token, children }: { token: any, children: 
 
   return (
     <Grid container>
-      <Grid item xs={6} sm={6} md={4} lg={4} xl={4}>
+      <Grid item xs={6} sm={6} md={4} lg={2} xl={4}>
         <h3 className={styles.statLabel}>Rank</h3>
         <span className={styles.stat}>
           {token.market_cap_rank ? `#${token.market_cap_rank}` : "-"}

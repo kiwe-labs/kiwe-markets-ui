@@ -10,7 +10,7 @@ export default function DestinationStats() {
   const { baseCurrency } = useMarket();
 
   const tokenMint = TokenMints.find(t => t.name === `${baseCurrency}`)
-  const tokenInfo = tokenMint ? tokenMint.name : ''
+  const tokenInfo = tokenMint ? tokenMint.name : null
 
   return <TokenGrid token={tokenInfo?.toLowerCase()} />
 }
