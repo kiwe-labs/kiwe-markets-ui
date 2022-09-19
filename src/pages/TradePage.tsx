@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Button, Col, Popover, Row, Select, Typography } from 'antd';
+import { Button, Col, Popover, Row, Select, Typography, Alert } from 'antd';
 import styled from 'styled-components';
 import Orderbook from '../components/Orderbook';
 import UserInfoTable from '../components/UserInfoTable';
 import FloatingElement from '../components/layout/FloatingElement';
-import StandaloneBalancesDisplay from '../components/StandaloneBalancesDisplay';
+//import StandaloneBalancesDisplay from '../components/StandaloneBalancesDisplay';
 import {
   getMarketInfos,
   getTradePageUrl,
@@ -16,7 +16,7 @@ import {
 import TradeForm from '../components/TradeForm';
 import TradesTable from '../components/TradesTable';
 import LinkAddress from '../components/LinkAddress';
-import DeprecatedMarketsInstructions from '../components/DeprecatedMarketsInstructions';
+//import DeprecatedMarketsInstructions from '../components/DeprecatedMarketsInstructions';
 import {
   DeleteOutlined,
   InfoCircleOutlined,
@@ -49,6 +49,7 @@ export default function TradePage() {
       localStorage.setItem('marketAddress', JSON.stringify(marketAddress));
     }
   }, [marketAddress]);
+
   const history = useHistory();
   function setMarketAddress(address) {
     history.push(getTradePageUrl(address));
@@ -115,13 +116,7 @@ function TradePageInner() {
   };
   
   const component = (() => {
-    if (handleDeprecated) {
-      return (
-        <DeprecatedMarketsPage
-          switchToLiveMarkets={() => setHandleDeprecated(false)}
-        />
-      );
-    } else if (width < 1000) {
+    if (width < 1000) {
       return <RenderSmaller {...componentProps} />;
     } else if (width < 1450) {
       return <RenderSmall {...componentProps} />;
@@ -159,6 +154,7 @@ function TradePageInner() {
           style={{ paddingLeft: 5, paddingRight: 5 }}
           gutter={16}
         >
+          
           <Col>
             <MarketSelector
               markets={markets}
@@ -235,7 +231,7 @@ function MarketSelector({
     <Select
       showSearch
       size={'large'}
-      style={{ width: 200 }}
+      style={{ width: 200, textAlign: 'center', border: '1px solid #262C39', borderRadius: '5px' }}
       placeholder={placeholder || 'Select a market'}
       optionFilterProp="name"
       onSelect={onSetMarketAddress}
@@ -292,7 +288,7 @@ function MarketSelector({
     </div>
   );
 }
-
+/*
 const DeprecatedMarketsPage = ({ switchToLiveMarkets }) => {
   return (
     <>
@@ -306,7 +302,7 @@ const DeprecatedMarketsPage = ({ switchToLiveMarkets }) => {
     </>
   );
 };
-
+*/
 const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <>
@@ -342,7 +338,7 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
         </Col>
 
         <Col
-          flex="700px"
+          flex="550px"
           style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
         >
           <FloatingElement style={{ flex: 1, padding: 0, overflow: 'hidden' }}>

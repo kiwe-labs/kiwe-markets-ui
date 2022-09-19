@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import styled from 'styled-components';
 import { useLocalStorageState } from '../utils/utils';
