@@ -29,7 +29,7 @@ export default function TokenChart({ token }: { token: any }) {
 
   return (
     <Grid container className="chart-wrapper">
-      <Grid item xs={6} sm={6} md={8}>
+      <Grid item xs={8} sm={6} md={8}>
         <h1 style={{ color: "#fff", fontSize: 24, lineHeight: "29px", marginBottom: 4 }}>
           {token.name}&nbsp;Price Chart
           
@@ -49,7 +49,7 @@ export default function TokenChart({ token }: { token: any }) {
            
         </div>
       </Grid>
-      <Grid item sm={12} md={2}>
+      <Grid item sm={12} md={6}>
         <a className={`${styles.range} ${sparkRange === 12 ? styles.active : ''}`} onClick={() => setSparkRange(12)}>12h</a>
         <a className={`${styles.range} ${sparkRange === 24 ? styles.active : ''}`} onClick={() => setSparkRange(24)}>1d</a>
         <a className={`${styles.range} ${sparkRange === 168 ? styles.active : ''}`} onClick={() => setSparkRange(168)}>7d</a>
