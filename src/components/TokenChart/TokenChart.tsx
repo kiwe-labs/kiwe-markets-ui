@@ -29,7 +29,7 @@ export default function TokenChart({ token }: { token: any }) {
 
   return (
     <Grid container className="chart-wrapper">
-      <Grid item xs={8} sm={12} md={10}>
+      <Grid item xs={6} sm={6} md={8}>
         <h1 style={{ color: "#fff", fontSize: 24, lineHeight: "29px", marginBottom: 4 }}>
           {token.name}&nbsp;Price Chart
           
