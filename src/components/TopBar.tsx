@@ -233,7 +233,7 @@ export default function TopBar() {
               <Select
                 onSelect={setEndpoint}
                 value={endpoint}
-                style={{ marginRight: 8, width: '150px' }}
+                style={{ marginRight: 8, width: '150px', border: '3px solid #262C39', borderRadius: '5px', textAlign: 'center' }}
               >
                 {availableEndpoints.map(({ name, endpoint }) => (
                   <Select.Option value={endpoint} key={endpoint}>
