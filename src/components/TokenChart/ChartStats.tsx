@@ -4,7 +4,6 @@ import { useMarket } from '../../utils/markets';
 import cgTokens from "../../config/cg_ids.json";
 import TokenMints from "../../config/token-mints.json";
 import TokenChart from "./TokenChart";
-import TokenStats from "./TokenStats";
 
 export default function DestinationStats() {
   const { baseCurrency } = useMarket();
