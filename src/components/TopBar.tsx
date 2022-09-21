@@ -3,6 +3,12 @@ import {
   PlusCircleOutlined,
   SettingOutlined,
   MenuOutlined,
+  AreaChartOutlined,
+  FileOutlined,
+  HomeOutlined,
+  ShopOutlined,
+  TeamOutlined,
+  DownOutlined
 } from '@ant-design/icons';
 import { Button, Col, Menu, Popover, Row, Select } from 'antd';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -155,33 +161,35 @@ export default function TopBar() {
             flex: 1,
           }}
         >
-           <Menu.Item key="/overview" style={{ margin: '0 10px' }}>
-            OVERVIEW
+          <Menu.Item key="/overview" style={{ margin: '0 10px' }}>
+            <HomeOutlined style={{ fontSize: '20px'}}/>OVERVIEW
           </Menu.Item>
 
           <Menu.Item key="/markets" style={{ margin: '0 10px' }}>
-            MARKETS
+            <ShopOutlined style={{ fontSize: '20px'}}/>MARKETS
           </Menu.Item>
 
           <Menu.Item key={tradePageUrl} style={{ margin: '0 10px 0 10px' }}>
-            TRADE
+            <AreaChartOutlined style={{ fontSize: '20px'}}/>TRADE
           </Menu.Item>
         
-          {!searchFocussed && (
+          {/*{!searchFocussed && ( */}
+
             <Menu.SubMenu
               title="MORE"
+              icon={<DownOutlined />}
               onTitleClick={() =>
                 window.open(EXTERNAL_LINKS['/more'], '_blank')
               }
               style={{ margin: '0 0px 0 10px' }}
-            >
+            > 
               <Menu.Item key="/docs-kiwe">
                 <a
                   href={EXTERNAL_LINKS['/docs-kiwe']}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  DOCS
+                  <FileOutlined style={{ fontSize: '20px'}}/>DOCS
                 </a>
               </Menu.Item>
 
@@ -191,11 +199,11 @@ export default function TopBar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  DAO
+                  <TeamOutlined style={{ fontSize: '20px'}}/>DAO
                 </a>
               </Menu.Item>
             </Menu.SubMenu>
-          )}
+          {/*})}*/}
           
         </Menu>
        <div
@@ -233,7 +241,7 @@ export default function TopBar() {
               <Select
                 onSelect={setEndpoint}
                 value={endpoint}
-                style={{ marginRight: 8, width: '150px', border: '3px solid #262C39', borderRadius: '5px', textAlign: 'center' }}
+                style={{ marginRight: 8, width: '150px', border: '3px solid #262C39', borderRadius: '5px', textAlign: 'center'}}
               >
                 {availableEndpoints.map(({ name, endpoint }) => (
                   <Select.Option value={endpoint} key={endpoint}>
